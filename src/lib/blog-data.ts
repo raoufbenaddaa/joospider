@@ -14,6 +14,32 @@ export const getBlogPosts = (language: 'en' | 'ar'): BlogPost[] => {
   if (language === 'en') {
     return [
       {
+        id: 6,
+        title: 'GOLDEN JOOSPIDER 2025: Nominations Open Soon',
+        excerpt: 'As every year, "Golden Joospider" returns to you with many works that have established themselves on the list of the best over the past months.',
+        content: `
+          <p>As every year, <strong>"Golden Joospider"</strong> returns to you with many works that have established themselves on the list of the best over the past months. This is your chance to recognize the excellence in our culture.</p>
+          
+          <p>The stage is being set for the most prestigious awards in the region. We are looking for the best of the best across several categories.</p>
+          
+          <h2>Share Your Predictions</h2>
+          <p>We want to hear from you! Share your expectations and predictions for:</p>
+          <ul>
+            <li><strong>Best Song</strong></li>
+            <li><strong>Best Artist</strong></li>
+            <li><strong>Best Rising Artist</strong></li>
+            <li><strong>Best Project</strong></li>
+          </ul>
+
+          <p><strong>GOLDEN JOOSPIDER 🥇 🕸️</strong></p>
+          <p>Coming very soon. Stay tuned for dates and voting details.</p>
+        `,
+        image: '/lovable-uploads/golden-joospider-2025.jpg',
+        date: '2025-10-04',
+        category: 'features',
+        author: 'Awards Committee'
+      },
+      {
         id: 5,
         title: 'GOLDEN PROJECT 2025: The Ultimate Battle Begins',
         excerpt: 'The bracket is set. The participants are ready. Who will take the crown in the Golden Project 2025?',
@@ -162,6 +188,31 @@ export const getBlogPosts = (language: 'en' | 'ar'): BlogPost[] => {
     ];
   } else {
     return [
+      {
+        id: 6,
+        title: 'جولدن جوسبايدر 2025: التوقعات بدأت',
+        excerpt: 'ككل عام ، تعود إليكم " غولدن جوسبايدر" هاته المرة و العديد من الأعمال التي نصبت نفسها على قائمة الأحسن خلال الاشهر الماضية .',
+        content: `
+          <p>ككل عام ، تعود إليكم <strong>" غولدن جوسبايدر"</strong> هاته المرة و العديد من الأعمال التي نصبت نفسها على قائمة الأحسن خلال الاشهر الماضية .</p>
+          
+          <p>التحضيرات جارية لأكبر حفل توزيع جوائز في المنطقة، حيث نسلط الضوء على الإبداع والتميز في عالم الراب.</p>
+          
+          <h2>شاركونا توقعاتكم لـ :</h2>
+          <ul>
+            <li><strong>أفضل اغنية</strong></li>
+            <li><strong>أفضل فنان</strong></li>
+            <li><strong>أفضل فنان صاعد</strong></li>
+            <li><strong>أفضل مشروع</strong></li>
+          </ul>
+
+          <p><strong>GOLDEN JOOSPIDER 🥇 🕸️</strong></p>
+          <p>قريباً جداً... انتظرونا لمعرفة المواعيد وتفاصيل التصويت.</p>
+        `,
+        image: '/lovable-uploads/golden-joospider-2025.jpg',
+        date: '2025-10-04',
+        category: 'features',
+        author: 'لجنة الجوائز'
+      },
       {
         id: 5,
         title: 'جولدن بروجكت 2025: المعركة الكبرى تبدأ الآن',
