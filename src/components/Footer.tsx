@@ -1,5 +1,6 @@
 import React from 'react';
 import { Instagram, Facebook, Twitter } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface FooterProps {
   language: 'en' | 'ar';
@@ -67,13 +68,13 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
             <h3 className="text-lg font-semibold text-white mb-4">{text.links}</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
               {currentLinks.map((link) => (
-                <a
+                <Link
                   key={link.path}
-                  href={link.path}
+                  to={link.path}
                   className="text-white/70 hover:text-white transition-colors"
                 >
                   {link.name}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -122,3 +123,4 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
 };
 
 export default Footer;
+
