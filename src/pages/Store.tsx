@@ -34,7 +34,7 @@ const Store: React.FC<StoreProps> = ({ language }) => {
     {
       id: 3,
       name: language === 'en' ? "JOOSPIDER'S BLACK T-SHIRT " : 'تي شيرت جوسبايدر',
-      price: 1900  ,
+      price: 1900,
       image: 'https://i.postimg.cc/pXtxD3Jk/3.jpg',
       category: 't-shirt',
     },
@@ -48,21 +48,21 @@ const Store: React.FC<StoreProps> = ({ language }) => {
     {
       id: 6,
       name: language === 'en' ? 'JOOSPIDER\'S BLACK HOODIE' : 'هودي جوسبايدر في اللون الاسود ',
-      price: 2900 ,
+      price: 2900,
       image: 'https://i.postimg.cc/1RTPDV14/joospider-HOODIE-AVAILABLE-FOR-SALE-SIZE-S-M-L-XL-PRICE-3500-DADELEVRY-TO-58-WILAYACO.jpg',
       category: language === 'en' ? 'hoodie' : 'هودي',
     },
     {
       id: 7,
       name: language === 'en' ? 'JOOSPIDER\'S WHITE T-SHIRT  ' : 'هودي جوسبايدر في اللون الأبيض ',
-      price: 1900 ,
+      price: 1900,
       image: 'https://i.postimg.cc/Bnf0VW60/joospider-T-SHIRT-AVAILABLE-FOR-SALE-SIZE-S-M-L-XL-PRINCE-1900-DADELEVRY-TO-58-WILAYA.jpg',
       category: language === 'en' ? 't-shirt' : 'اقمصة ',
     },
     {
       id: 8,
       name: language === 'en' ? ' JOOSPIDER\'S KEYRING   ' : 'حلقة مفاتيح  ',
-      price: 200  ,
+      price: 200,
       image: 'https://i.postimg.cc/X7CWLNnL/joospider-KEYRING-PRICE-200-DACONTACT-artlockdesignspg124-LIVRAISON-58-WILAYA.webp',
       category: language === 'en' ? 'accessories' : 'اخرى',
     },
@@ -75,7 +75,7 @@ const Store: React.FC<StoreProps> = ({ language }) => {
       description:
         'Get your hands on official Joospider merchandise. From clothing to music, find exclusive items that match your style.',
       categories: {
-        all: 'All Products', 
+        all: 'All Products',
         hoodie: 'Hoodie ',
         "t-shirt": 'T-Shirt',
         accessories: 'others',
@@ -190,7 +190,7 @@ const Store: React.FC<StoreProps> = ({ language }) => {
                 <ShoppingBag size={18} />
                 <span>{text.cart.viewCart}</span>
                 {cartItems.length > 0 && (
-                  <span className="ml-2 bg-white text-spider-red w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold">
+                  <span className="ms-2 bg-white text-spider-red w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold">
                     {cartItems.reduce((total, item) => total + item.quantity, 0)}
                   </span>
                 )}
@@ -234,8 +234,8 @@ const Store: React.FC<StoreProps> = ({ language }) => {
       {/* Shopping Cart Sidebar */}
       <div
         className={cn(
-          'fixed top-0 right-0 h-full w-full sm:w-96 bg-black/95 z-50 transform transition-all duration-300 shadow-xl',
-          cartOpen ? 'translate-x-0' : 'translate-x-full'
+          'fixed top-0 end-0 h-full w-full sm:w-96 bg-black/95 z-50 transform transition-all duration-300 shadow-xl',
+          cartOpen ? 'translate-x-0' : (isRtl ? '-translate-x-full' : 'translate-x-full')
         )}
       >
         <div className="p-6 h-full flex flex-col">

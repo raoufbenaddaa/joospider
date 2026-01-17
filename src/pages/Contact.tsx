@@ -11,7 +11,7 @@ interface ContactProps {
 
 const Contact: React.FC<ContactProps> = ({ language }) => {
   const isRtl = language === 'ar';
-  
+
   const content = {
     en: {
       title: 'Contact',
@@ -36,13 +36,13 @@ const Contact: React.FC<ContactProps> = ({ language }) => {
       follow: 'تابع جوسبايدر',
     }
   };
-  
+
   const text = language === 'en' ? content.en : content.ar;
-  
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  
+
   return (
     <main className={cn("min-h-screen bg-spider-dark pt-24", isRtl ? 'rtl' : 'ltr')}>
       <div className="section-container">
@@ -62,21 +62,21 @@ const Contact: React.FC<ContactProps> = ({ language }) => {
               {text.description}
             </p>
           </RevealOnScroll>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2">
               <RevealOnScroll>
                 <ContactForm language={language} />
               </RevealOnScroll>
             </div>
-            
+
             <div className="space-y-8">
               <RevealOnScroll>
                 <div className="spider-card p-6">
                   <h3 className="text-xl font-bold text-white mb-4">{text.contactInfo}</h3>
                   <ul className="space-y-4">
                     <li className="flex items-center">
-                      <Mail size={20} className="text-spider-red mr-3" />
+                      <Mail size={20} className="text-spider-red me-3" />
                       <div>
                         <p className="text-white/50 text-sm">{text.email}</p>
                         <p className="text-white">joospider1@gmail.com</p>
@@ -99,12 +99,12 @@ const Contact: React.FC<ContactProps> = ({ language }) => {
                   </ul>
                 </div>
               </RevealOnScroll>
-              
+
               <RevealOnScroll delay={200}>
                 <div className="spider-card p-6">
                   <h3 className="text-xl font-bold text-white mb-4">{text.socialMedia}</h3>
                   <p className="text-white/70 mb-4">{text.follow}</p>
-                  <div className="flex space-x-4">
+                  <div className="flex gap-4">
                     <a href="https://www.instagram.com/joospider/" className="social-icon" aria-label="Instagram">
                       <Instagram size={20} />
                     </a>
@@ -117,12 +117,12 @@ const Contact: React.FC<ContactProps> = ({ language }) => {
                   </div>
                 </div>
               </RevealOnScroll>
-              
+
               <RevealOnScroll delay={400}>
                 <div className="aspect-square rounded-lg overflow-hidden">
-                  <img 
-                    src="/lovable-uploads/1dc77e45-085a-4aee-bafe-e9d8ef11df78.png" 
-                    alt="Joospider" 
+                  <img
+                    src="/lovable-uploads/1dc77e45-085a-4aee-bafe-e9d8ef11df78.png"
+                    alt="Joospider"
                     className="w-full h-full object-cover"
                   />
                 </div>

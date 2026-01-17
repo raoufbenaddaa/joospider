@@ -13,17 +13,17 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
-  
+
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-    
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  
+
   // Close mobile menu when route changes
   useEffect(() => {
     setMobileMenuOpen(false);
@@ -49,10 +49,10 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
   };
 
   const currentNavItems = language === 'en' ? navItems.en : navItems.ar;
-  
+
   return (
     <>
-      <header 
+      <header
         className={cn(
           'fixed top-0 left-0 w-full z-50 transition-all duration-300',
           isScrolled ? 'bg-black/80 backdrop-blur-md shadow-lg' : 'bg-transparent'
@@ -61,40 +61,37 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
       >
         <div className="container mx-auto px-4 md:px-6 py-4 flex items-center justify-between">
           <Link to="/" className="flex items-center">
-            <img 
-              src="/lovable-uploads/1dc77e45-085a-4aee-bafe-e9d8ef11df78.png" 
-              alt="Joospider Logo" 
-              className="h-12 w-12 rounded-full animate-pulse-red" 
+            <img
+              src="/lovable-uploads/1dc77e45-085a-4aee-bafe-e9d8ef11df78.png"
+              alt="Joospider Logo"
+              className="h-12 w-12 rounded-full animate-pulse-red"
             />
-           <span className="text-xl font-bold ml-2 text-white">
-  {language === 'ar' ? 'جوسبايدر' : 'JOOSPIDER'}
-</span>
+            <span className="text-xl font-bold ms-2 text-white">
+              {language === 'ar' ? 'جوسبايدر' : 'JOOSPIDER'}
+            </span>
           </Link>
-          
+
           {/* Desktop Navigation */}
-          <nav className={cn(
-  "hidden md:flex items-center",
-  isRtl ? "flex-row-reverse gap-x-8" : "gap-x-8"
-)}>
+          <nav className="hidden md:flex items-center gap-x-8">
             {currentNavItems.map((item) => (
-              <Link 
-                key={item.path} 
-                to={item.path} 
+              <Link
+                key={item.path}
+                to={item.path}
                 className="nav-link"
               >
                 {item.name}
               </Link>
             ))}
-            <button 
+            <button
               onClick={toggleLanguage}
               className="web-btn py-1 px-3 text-sm"
             >
               {language === 'en' ? 'العربية' : 'English'}
             </button>
           </nav>
-          
+
           {/* Mobile Menu Button */}
-          <button 
+          <button
             className="md:hidden text-white hover:text-spider-red transition-colors"
             onClick={() => setMobileMenuOpen(true)}
             aria-label="Open Menu"
@@ -103,9 +100,9 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
           </button>
         </div>
       </header>
-      
+
       {/* Mobile Menu */}
-      <div 
+      <div
         className={cn(
           'fixed inset-0 z-[60] bg-black/90 backdrop-blur-lg transition-all duration-300',
           mobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
@@ -115,15 +112,15 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
         <div className="h-full flex flex-col">
           <div className="flex justify-between items-center p-4 border-b border-white/10">
             <div className="flex items-center">
-              <img 
+              <img
                 src="/lovable-uploads/1dc77e45-085a-4aee-bafe-e9d8ef11df78.png"
-                alt="Joospider Logo" 
+                alt="Joospider Logo"
                 className="h-10 w-10 rounded-full"
               />
-              <span className="text-xl font-bold ml-2">JOOSPIDER</span>
+              <span className="text-xl font-bold ms-2">JOOSPIDER</span>
             </div>
-            <button 
-              onClick={() => setMobileMenuOpen(false)} 
+            <button
+              onClick={() => setMobileMenuOpen(false)}
               className="text-white"
               aria-label="Close Menu"
             >
@@ -132,7 +129,7 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
               </svg>
             </button>
           </div>
-          
+
           <nav className="flex-1 overflow-y-auto py-4">
             {currentNavItems.map((item) => (
               <Link
@@ -144,39 +141,39 @@ const Navbar: React.FC<NavbarProps> = ({ language, toggleLanguage }) => {
               </Link>
             ))}
           </nav>
-          
+
           <div className="p-4 border-t border-white/10">
-            <button 
+            <button
               onClick={toggleLanguage}
               className="web-btn w-full justify-center"
             >
               {language === 'en' ? 'العربية' : 'English'}
             </button>
-            
+
             <div className="flex justify-center mt-6 gap-4">
-              <a 
-                href="https://www.instagram.com/joospider/" 
-                target="_blank" 
+              <a
+                href="https://www.instagram.com/joospider/"
+                target="_blank"
                 rel="noopener noreferrer"
-                className="social-icon" 
+                className="social-icon"
                 aria-label="Instagram"
               >
                 <Instagram size={20} />
               </a>
-              <a 
-                href="https://www.facebook.com/profile.php?id=100088511291784" 
-                target="_blank" 
+              <a
+                href="https://www.facebook.com/profile.php?id=100088511291784"
+                target="_blank"
                 rel="noopener noreferrer"
-                className="social-icon" 
+                className="social-icon"
                 aria-label="Facebook"
               >
                 <Facebook size={20} />
               </a>
-              <a 
-                href="https://x.com/joospider" 
-                target="_blank" 
+              <a
+                href="https://x.com/joospider"
+                target="_blank"
                 rel="noopener noreferrer"
-                className="social-icon" 
+                className="social-icon"
                 aria-label="Twitter"
               >
                 <Twitter size={20} />

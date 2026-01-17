@@ -105,15 +105,15 @@
   
   .nav-link {
     @apply relative text-white/80 hover:text-white transition-colors duration-300
-    after:content-[''] after:absolute after:bottom-0 after:left-0 
+    after:content-[''] after:absolute after:bottom-0 after:start-0 
     after:w-full after:h-[2px] after:bg-spider-red
-    after:origin-bottom-right after:scale-x-0
-    hover:after:scale-x-100 hover:after:origin-bottom-left
+    after:origin-end after:scale-x-0
+    hover:after:scale-x-100 hover:after:origin-start
     after:transition-transform after:duration-300;
   }
 
   .burger-menu-link {
-    @apply block w-full text-left px-4 py-3 text-lg font-medium
+    @apply block w-full text-start px-4 py-3 text-lg font-medium
     border-b border-white/10 hover:bg-spider-red/20 transition-colors duration-300;
   }
 

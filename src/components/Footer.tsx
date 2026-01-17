@@ -60,7 +60,7 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
                 alt="Joospider Logo"
                 className="h-12 w-12 rounded-full"
               />
-              <span className="text-xl font-bold ml-2 text-white">JOOSPIDER</span>
+              <span className="text-xl font-bold ms-2 text-white">JOOSPIDER</span>
             </div>
             <p className="mt-4 text-white/70">{text.description}</p>
           </div>
@@ -84,7 +84,7 @@ const Footer: React.FC<FooterProps> = ({ language }) => {
           {/* Social Media */}
           <div>
             <h3 className="text-lg font-semibold text-white mb-4">{text.social}</h3>
-            <div className="flex space-x-4">
+            <div className="flex gap-4">
               <a
                 href="https://www.instagram.com/joospider/"
                 target="_blank"

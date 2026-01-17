@@ -14,7 +14,7 @@ const Home: React.FC<HomeProps> = ({ language }) => {
     hero: {
       heading: language === 'en' ? 'Welcome to Joospider website' : 'مرحبًا بكم في موقع جوسبايدر',
       subheading: language === 'en' ? ' Best Rap Media in Algeria' : ' أفضل صفحة إعلام الراب في الجزائر ',
-description: language === 'en' ? 'Stay connected with the heartbeat of Algerian rap — fresh news, hot updates, and exclusive drops all in one place.' : 'ابق على اتصال مع نبض موسيقى الراب الجزائرية - الأخبار الطازجة والتحديثات الساخنة والإصدارات الحصرية، كل ذلك في مكان واحد.',
+      description: language === 'en' ? 'Stay connected with the heartbeat of Algerian rap — fresh news, hot updates, and exclusive drops all in one place.' : 'ابق على اتصال مع نبض موسيقى الراب الجزائرية - الأخبار الطازجة والتحديثات الساخنة والإصدارات الحصرية، كل ذلك في مكان واحد.',
       cta: language === 'en' ? 'Explore Music' : 'استكشاف الموسيقى',
     },
     about: {
@@ -86,7 +86,7 @@ description: language === 'en' ? 'Stay connected with the heartbeat of Algerian 
               <Button asChild className="web-btn text-lg px-8 py-6">
                 <Link to="https://open.spotify.com/album/5ufisdQlWazVQoMWoSrBdT?si=tn79YU_wT9CUNFQY3ON4Rw">
                   {text.hero.cta}
-                  <ArrowRight className={cn("ml-2", isRtl && "rotate-180")} size={16} />
+                  <ArrowRight className={cn("ms-2", isRtl && "rotate-180")} size={16} />
                 </Link>
               </Button>
             </RevealOnScroll>
@@ -105,13 +105,13 @@ description: language === 'en' ? 'Stay connected with the heartbeat of Algerian 
           <RevealOnScroll>
             <div className="relative">
               <div className="aspect-square rounded-lg overflow-hidden">
-                <img 
+                <img
                   src="/lovable-uploads/1dc77e45-085a-4aee-bafe-e9d8ef11df78.png"
                   alt="Joospider"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 w-32 h-32 border-4 border-spider-red rounded-lg"></div>
+              <div className="absolute -bottom-6 -end-6 w-32 h-32 border-4 border-spider-red rounded-lg"></div>
             </div>
           </RevealOnScroll>
           <div>
@@ -129,7 +129,7 @@ description: language === 'en' ? 'Stay connected with the heartbeat of Algerian 
               <Button asChild className="web-btn">
                 <Link to="/about">
                   {text.about.cta}
-                  <ArrowRight className={cn("ml-2", isRtl && "rotate-180")} size={16} />
+                  <ArrowRight className={cn("ms-2", isRtl && "rotate-180")} size={16} />
                 </Link>
               </Button>
             </RevealOnScroll>
@@ -150,8 +150,8 @@ description: language === 'en' ? 'Stay connected with the heartbeat of Algerian 
             <RevealOnScroll key={product.id} delay={index * 200}>
               <div className="spider-card overflow-hidden group">
                 <div className="aspect-square rounded-lg overflow-hidden">
-                  <img 
-                    src={product.image} 
+                  <img
+                    src={product.image}
                     alt={product.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
