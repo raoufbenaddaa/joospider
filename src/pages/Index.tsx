@@ -4,6 +4,7 @@ import Home from './Home';
 import About from './About';
 import Store from './Store';
 import Blog from './Blog';
+import BlogPostDetail from './BlogPostDetail';
 import Contact from './Contact';
 import NotFound from './NotFound';
 import Navbar from '@/components/Navbar';
@@ -12,11 +13,11 @@ import Footer from '@/components/Footer';
 const Index: React.FC = () => {
   const [language, setLanguage] = useState<'en' | 'ar'>('en');
   const location = useLocation();
-  
+
   const toggleLanguage = () => {
     setLanguage(prev => prev === 'en' ? 'ar' : 'en');
   };
-  
+
   // Scroll to top on route change
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -35,35 +36,36 @@ const Index: React.FC = () => {
       },
       { threshold: 0.1 }
     );
-    
+
     const revealItems = document.querySelectorAll('.reveal-item');
     revealItems.forEach(item => {
       observer.observe(item);
     });
-    
+
     return () => {
       revealItems.forEach(item => {
         observer.unobserve(item);
       });
     };
   }, [location.pathname]);
-  
+
   return (
-    <div 
-      className="min-h-screen flex flex-col" 
+    <div
+      className="min-h-screen flex flex-col"
       dir={language === 'ar' ? 'rtl' : 'ltr'}
     >
       <Navbar language={language} toggleLanguage={toggleLanguage} />
-      
+
       <Routes>
         <Route path="/" element={<Home language={language} />} />
         <Route path="/about" element={<About language={language} />} />
         <Route path="/store" element={<Store language={language} />} />
         <Route path="/blog" element={<Blog language={language} />} />
+        <Route path="/blog/:id" element={<BlogPostDetail language={language} />} />
         <Route path="/contact" element={<Contact language={language} />} />
         <Route path="*" element={<NotFound language={language} />} />
       </Routes>
-      
+
       <Footer language={language} />
     </div>
   );
