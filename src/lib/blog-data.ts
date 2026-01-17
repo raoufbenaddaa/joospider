@@ -14,6 +14,28 @@ export const getBlogPosts = (language: 'en' | 'ar'): BlogPost[] => {
   if (language === 'en') {
     return [
       {
+        id: 4,
+        title: 'Joospider Launches Official Website Designed by RaoufDev',
+        excerpt: 'A historic moment for Joospider and the Algerian rap community as we go live with our first dedicated digital platform.',
+        content: `
+          <p>Today marks a significant milestone in the journey of <strong>Joospider</strong>. We are incredibly proud to share that our first official website is finally live!</p>
+          
+          <p>This platform was created and developed by the talented <strong>raoufbenadda</strong>, also known as <strong>RaoufDev</strong>. It serves as a central hub for all our latest news, exclusive merchandise, and deep dives into the Algerian rap scene.</p>
+          
+          <h2>A Shared Vision</h2>
+          <p>The goal was to create a digital space that truly reflects the energy and aesthetics of our community. From the sleek dark mode to the interactive store, every detail has been crafted to provide the best experience for our followers.</p>
+          
+          <p>You can follow the developer and see more of his impressive work on his Instagram: <a href="https://www.instagram.com/raouf_dev/" target="_blank" rel="noopener noreferrer">@raouf_dev</a>.</p>
+          
+          <h2>What to Expect</h2>
+          <p>This website is just the beginning. We have many more features planned, including exclusive member content, live stream integrations, and an expanded blog section. Stay tuned as we continue to push the boundaries of rap media in Algeria.</p>
+        `,
+        image: '/lovable-uploads/joospider-website-launch.png',
+        date: '2025-04-23',
+        category: 'news',
+        author: 'Joospider'
+      },
+      {
         id: 1,
         title: 'New EP "JOOR3A\'RAP" - A Fresh Wave in Algerian Rap',
         excerpt: 'A new Ep from Joospider, which contains 7 songs exploring the depths of the Algerian hip-hop scene.',
@@ -103,6 +125,28 @@ export const getBlogPosts = (language: 'en' | 'ar'): BlogPost[] => {
     ];
   } else {
     return [
+      {
+        id: 4,
+        title: 'جوسبايدر يطلق موقعه الرسمي بتصميم RaoufDev',
+        excerpt: 'لحظة تاريخية لجوسبايدر ومجتمع الراب الجزائري مع انطلاق أول منصة رقمية مخصصة لنا.',
+        content: `
+          <p>اليوم يمثل علامة فارقة في مسيرة <strong>جوسبايدر</strong>. نحن فخورون جداً بمشاركتكم خبر انطلاق موقعنا الرسمي الأول أخيراً!</p>
+          
+          <p>تم إنشاء وتطوير هذه المنصة من قبل المبدع <strong>رؤوف بن عدة</strong>، المعروف بـ <strong>RaoufDev</strong>. الموقع سيكون المركز الرئيسي لكل أخبارنا، منتجاتنا الحصرية، والغوص العميق في مشهد الراب الجزائري.</p>
+          
+          <h2>رؤية مشتركة</h2>
+          <p>كان الهدف هو خلق مساحة رقمية تعكس حقاً طاقة وجماليات مجتمعنا. من الوضع الليلي الأنيق إلى المتجر التفاعلي، تم تصميم كل تفصيل لتقديم أفضل تجربة لمتابعينا.</p>
+          
+          <p>يمكنكم متابعة المطور ورؤية المزيد من أعماله المميزة عبر حسابه على إنستغرام: <a href="https://www.instagram.com/raouf_dev/" target="_blank" rel="noopener noreferrer">@raouf_dev</a>.</p>
+          
+          <h2>ماذا ننتظر؟</h2>
+          <p>هذا الموقع هو مجرد البداية. لدينا العديد من الميزات المخطط لها، بما في ذلك المحتوى الحصري للأعضاء، وتكامل البث المباشر، وقسم مدونة موسع. ابقوا على اطلاع بينما نواصل دفع حدود إعلام الراب في الجزائر.</p>
+        `,
+        image: '/lovable-uploads/joospider-website-launch.png',
+        date: '2025-04-23',
+        category: 'news',
+        author: 'جوسبايدر'
+      },
       {
         id: 1,
         title: 'الألبوم الجديد "جرعة راب" - موجة جديدة في الراب الجزائري',
