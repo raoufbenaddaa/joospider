@@ -102,21 +102,21 @@ export default {
 					to: { transform: 'translateX(-100%)' }
 				},
 				'web-spin': {
-					from: { 
-						transform: 'rotate(0deg) scale(0.8)', 
-						opacity: '0.2' 
+					from: {
+						transform: 'rotate(0deg) scale(0.8)',
+						opacity: '0.2'
 					},
-					to: { 
-						transform: 'rotate(720deg) scale(1)', 
-						opacity: '1' 
+					to: {
+						transform: 'rotate(720deg) scale(1)',
+						opacity: '1'
 					}
 				},
 				'pulse-red': {
-					'0%, 100%': { 
-						boxShadow: '0 0 15px 0px rgba(128, 23, 26, 0.7)' 
+					'0%, 100%': {
+						boxShadow: '0 0 15px 0px rgba(128, 23, 26, 0.7)'
 					},
-					'50%': { 
-						boxShadow: '0 0 30px 5px rgba(128, 23, 26, 0.9)' 
+					'50%': {
+						boxShadow: '0 0 30px 5px rgba(128, 23, 26, 0.9)'
 					}
 				},
 				'float': {
@@ -137,5 +137,8 @@ export default {
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [
+		require("tailwindcss-animate"),
+		require("@tailwindcss/typography"),
+	],
 } satisfies Config;

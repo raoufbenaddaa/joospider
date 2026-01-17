@@ -37,15 +37,35 @@ const BlogPostDetail: React.FC<BlogPostDetailProps> = ({ language }) => {
         );
     }
 
+    const categoryTranslations = {
+        en: {
+            news: 'News',
+            releases: 'Releases',
+            events: 'Events',
+            features: 'Features'
+        },
+        ar: {
+            news: 'أخبار',
+            releases: 'إصدارات',
+            events: 'فعاليات',
+            features: 'مميزات'
+        }
+    };
+
+    const getTranslatedCategory = (cat: string) => {
+        const trans = categoryTranslations[language];
+        return trans[cat as keyof typeof trans] || cat;
+    };
+
     return (
-        <main className={cn("min-h-screen bg-spider-dark pt-24 pb-12", isRtl ? 'rtl' : 'ltr')}>
+        <main className={cn("min-h-screen bg-spider-dark pt-24 pb-12", isRtl ? 'rtl' : 'ltr')} dir={isRtl ? 'rtl' : 'ltr'}>
             <article className="section-container max-w-4xl mx-auto px-4">
                 <RevealOnScroll>
                     <Link
                         to="/blog"
                         className="inline-flex items-center text-white/50 hover:text-spider-red transition-colors mb-8"
                     >
-                        <ArrowLeft size={16} className={cn("mr-2", isRtl && "rotate-180 ml-2 mr-0")} />
+                        <ArrowLeft size={16} className={cn("inline-block", isRtl ? "ml-2 rotate-180" : "mr-2")} />
                         {language === 'en' ? 'Back to Blog' : 'العودة للمدونة'}
                     </Link>
                 </RevealOnScroll>
@@ -73,7 +93,7 @@ const BlogPostDetail: React.FC<BlogPostDetailProps> = ({ language }) => {
                             </div>
                             <div className="flex items-center gap-1">
                                 <Tag size={14} className="text-spider-red" />
-                                <span>{post.category}</span>
+                                <span>{getTranslatedCategory(post.category)}</span>
                             </div>
                         </div>
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
@@ -83,11 +103,14 @@ const BlogPostDetail: React.FC<BlogPostDetailProps> = ({ language }) => {
 
                     <RevealOnScroll delay={600}>
                         <div
-                            className="prose prose-invert prose-spider max-w-none mt-12 
-              text-white/80 text-lg leading-relaxed 
-              [&>h2]:text-white [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:mt-12 [&>h2]:mb-6
-              [&>p]:mb-6 [&>ul]:list-disc [&>ul]:ps-6 [&>ul]:mb-6 [&>ul>li]:mb-2
-              [&>strong]:text-spider-red [&>strong]:font-bold"
+                            className={cn(
+                                "prose prose-invert prose-spider max-w-none mt-12",
+                                "text-white/80 text-lg leading-relaxed",
+                                "prose-headings:text-white prose-headings:font-bold prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6",
+                                "prose-p:mb-6 prose-strong:text-spider-red prose-strong:font-bold",
+                                "prose-ul:list-disc prose-ul:ps-6 prose-ul:mb-6",
+                                isRtl && "prose-rtl text-right"
+                            )}
                             dangerouslySetInnerHTML={{ __html: post.content }}
                         />
                     </RevealOnScroll>

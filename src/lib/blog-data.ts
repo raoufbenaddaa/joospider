@@ -14,6 +14,43 @@ export const getBlogPosts = (language: 'en' | 'ar'): BlogPost[] => {
   if (language === 'en') {
     return [
       {
+        id: 5,
+        title: 'GOLDEN PROJECT 2025: The Ultimate Battle Begins',
+        excerpt: 'The bracket is set. The participants are ready. Who will take the crown in the Golden Project 2025?',
+        content: `
+          <p>The wait is finally over. <strong>GOLDEN PROJECT 2025</strong> is officially here, and the Algerian rap scene is about to witness its most intense competition yet. This is not just a list; it's a battle for the throne.</p>
+          
+          <p>This year, we've gathered the finest projects and artists to compete in a head-to-head bracket style tournament. From street anthems to experimental flows, every style is represented. The stakes are high, and every vote counts.</p>
+          
+          <h2>The Competition Structure</h2>
+          <p>The bracket is divided into intense matchups where only the strongest survive. As you can see in the official bracket, many spots are still marked with <strong>question marks (?)</strong>. These represent the mystery of the upcoming rounds and the potential for any artist to rise to the top.</p>
+          <p>We are currently in the early stages where the initial heat is building up. Some of the most anticipated projects are already facing off, and the community response has been overwhelming.</p>
+          
+          <p>Key participants currently in the spotlight include:</p>
+          <ul>
+            <li><strong>HB7</strong> with the explosive "DOMINANCE"</li>
+            <li><strong>7AIDER JR</strong> bringing deep vibes with "ECHOES"</li>
+            <li><strong>ICOWESH</strong> representing with "TALEF"</li>
+            <li><strong>ZAK</strong> showcasing lyrical depth in "ÉTATS D'ESPRIT"</li>
+          </ul>
+
+          <h2>What's Happening Now?</h2>
+          <p>The tournament is moving at a rapid pace. We are seeing incredible engagement from fans across all platforms. The bracket is designed to filter out the noise and leave only the gold. Every week, new matchups are decided by you, the listeners.</p>
+
+          <h2>A Message to the Fans</h2>
+          <p>As we embark on this journey, we have one simple request for our community: <em>"Let's be fair to everyone, don't let your feelings interfere."</em></p>
+          
+          <p>We know you have your favorite artists, but we encourage you to listen closely to each project and vote for the one that truly deserves the win this year. This is about elevating the culture and recognizing pure talent, regardless of personal bias.</p>
+
+          <h2>Looking Ahead</h2>
+          <p>Keep a close eye on our social media channels and this blog for live updates, voting links, and exclusive interviews with the participants. The road to the trophy is long, but only one will remain standing. Who will be the Golden Pro of 2025?</p>
+        `,
+        image: '/lovable-uploads/golden-project-bracket.png',
+        date: '2025-05-10',
+        category: 'features',
+        author: 'Awards Committee'
+      },
+      {
         id: 4,
         title: 'Joospider Launches Official Website Designed by RaoufDev',
         excerpt: 'A historic moment for Joospider and the Algerian rap community as we go live with our first dedicated digital platform.',
@@ -125,6 +162,43 @@ export const getBlogPosts = (language: 'en' | 'ar'): BlogPost[] => {
     ];
   } else {
     return [
+      {
+        id: 5,
+        title: 'جولدن بروجكت 2025: المعركة الكبرى تبدأ الآن',
+        excerpt: 'تم الكشف عن القرعة. المشاركون جاهزون. من سيتوج بلقب جولدن بروجكت لعام 2025؟',
+        content: `
+          <p>لقد انتهى الانتظار أخيراً. <strong>GOLDEN PROJECT 2025</strong> هنا رسمياً، ومشهد الراب الجزائري على وشك أن يشهد أقوى منافسة له حتى الآن. هذه ليست مجرد قائمة؛ إنها معركة على العرش.</p>
+          
+          <p>هذا العام، قمنا بجمع أفضل المشاريع والفنانين للتنافس في نظام "البراكت" (القرعة المباشرة). من أغاني الشارع إلى التدفقات التجريبية، كل الأنماط ممثلة في هذه المنافسة. الرهانات عالية، وكل صوت له قيمته.</p>
+          
+          <h2>هيكل المنافسة</h2>
+          <p>تنقسم القرعة إلى مواجهات حاسمة حيث لا يبقى إلا الأفضل. كما تلاحظون في المخطط الرسمي، لا تزال العديد من المراكز مميزة بـ <strong>علامات استفهام (؟)</strong>. تمثل هذه العلامات غموض الجولات القادمة وإمكانية صعود أي فنان إلى القمة.</p>
+          <p>نحن حالياً في المراحل الأولى حيث تبدأ الإثارة في التصاعد. بعض المشاريع الأكثر انتظاراً بدأت بالفعل في التواجه، وكان رد فعل الجمهور مذهلاً.</p>
+          
+          <p>المشاركون الأساسيون الموجودون تحت الأضواء حالياً يشملون:</p>
+          <ul>
+            <li><strong>HB7</strong> بمشروع "DOMINANCE" المتفجر</li>
+            <li><strong>7AIDER JR</strong> الذي يجلب طاقة عميقة بمشروع "ECHOES"</li>
+            <li><strong>ICOWESH</strong> الذي يمثل بقوة في مشروع "TALEF"</li>
+            <li><strong>ZAK</strong> الذي يستعرض عمق الكلمات في "ÉTATS D'ESPRIT"</li>
+          </ul>
+
+          <h2>ماذا يحدث الآن؟</h2>
+          <p>البطولة تسير بوتيرة سريعة. نشهد تفاعلاً كبيراً من المعجبين عبر جميع المنصات. تم تصميم القرعة لتصفية كل شيء وترك الذهب فقط. في كل أسبوع، يتم تحديد مواجهات جديدة بواسطتكم أنتم، المستمعين.</p>
+
+          <h2>رسالة إلى المعجبين</h2>
+          <p>بينما ننطلق في هذه الرحلة، لدينا طلب بسيط لمجتمعنا: <em>"نحن نعلم جيداً أن لديك فنانك المفضل... ضع عاطفتك بجهة وصوّت على من يستحقها فعلاً هذا العام."</em></p>
+          
+          <p>نحن نعلم أن قلوبكم مع فنانين معينين، ولكننا نشجعكم على الاستماع بتركيز لكل مشروع والتصويت للعمل الذي يستحق الفوز حقاً. الهدف هو الارتقاء بالثقافة والاعتراف بالموهبة الصافية، بغض النظر عن الانحياز الشخصي.</p>
+
+          <h2>نظرة للمستقبل</h2>
+          <p>ابقوا أعينكم على حساباتنا في التواصل الاجتماعي وهذه المدونة لمتابعة التحديثات المباشرة، روابط التصويت، والمقابلات الحصرية مع المشاركين. الطريق إلى الكأس طويل، وفائز واحد فقط سيبقى في النهاية. من سيكون بطل جولدن بروجكت لعام 2025؟</p>
+        `,
+        image: '/lovable-uploads/golden-project-bracket.png',
+        date: '2025-05-10',
+        category: 'features',
+        author: 'لجنة الجوائز'
+      },
       {
         id: 4,
         title: 'جوسبايدر يطلق موقعه الرسمي بتصميم RaoufDev',
